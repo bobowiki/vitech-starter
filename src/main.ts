@@ -11,4 +11,6 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 
+// 提交一下
+
 app.mount('#app')

@@ -4,7 +4,12 @@ import HelloWorld from '../components/HelloWorld.vue'
 </script>
 
 <template>
-  <main>
+  <div class="main">
     <HelloWorld :msg="'hello'" />
-  </main>
+  </div>
 </template>
+<style lang="scss">
+.main {
+  color: red;
+}
+</style>

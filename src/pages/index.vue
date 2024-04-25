@@ -4,9 +4,10 @@ import { RouterLink } from 'vue-router/auto'
 </script>
 
 <template>
-  <div>hello world</div>
+  <div class="p-10">hello world</div>
   <!-- <div msg="hello">hello</div> -->
   <!-- <HelloWorld msg="13">11111</HelloWorld> -->
+
   <RouterLink to="/">home</RouterLink>
   <RouterLink to="about">about</RouterLink>
 </template>

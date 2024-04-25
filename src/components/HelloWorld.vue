@@ -1,5 +1,5 @@
 <template lang="">
-  <div>hello world</div>
+  <div>hello worldhhhh</div>
   <div>{{ msg }}</div>
 </template>
 

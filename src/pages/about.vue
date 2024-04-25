@@ -1,7 +1,7 @@
 <template lang="">
   <div>about</div>
 </template>
-<script>
+<script setup lang="ts">
 // export default {}
 </script>
 <style lang=""></style>

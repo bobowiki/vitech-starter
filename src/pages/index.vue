@@ -1,7 +1,14 @@
-<template lang="">
-  <div>hello world</div>
-</template>
-<script>
-// export default {}
+<script lang="ts">
+import { RouterLink } from 'vue-router/auto'
+// import HelloWorld from '@/components/HelloWorld.vue'
 </script>
+
+<template>
+  <div>hello world</div>
+  <!-- <div msg="hello">hello</div> -->
+  <!-- <HelloWorld msg="13">11111</HelloWorld> -->
+  <RouterLink to="/">home</RouterLink>
+  <RouterLink to="about">about</RouterLink>
+</template>
+
 <style lang=""></style>

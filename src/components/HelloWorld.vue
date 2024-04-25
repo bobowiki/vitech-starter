@@ -6,4 +6,4 @@
 <script setup lang="ts">
 defineProps<{ msg: string }>()
 </script>
-<style lang=""></style>
+<style scoped></style>

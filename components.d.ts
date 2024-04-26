@@ -7,6 +7,14 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    HomeWorld: (typeof import('./src/components/HomeWorld.vue'))['default']
+    ElButton: typeof import('element-plus/es')['ElButton']
+    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    IFaSolidDiceFive: typeof import('~icons/fa-solid/dice-five')['default']
+    IMdiAccount: typeof import('~icons/mdi/account')['default']
+    IMdiDramaMasks: typeof import('~icons/mdi/drama-masks')['default']
+    IMdiLockPasswordFill: typeof import('~icons/mdi/lock-password-fill')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
+    UserComponent: typeof import('./src/components/user/UserComponent.vue')['default']
   }
 }

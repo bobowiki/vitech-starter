@@ -9,6 +9,9 @@ import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -35,7 +38,15 @@ export default defineConfig({
     }),
     Components({
       // relative paths to the directory to search for components.
-      dirs: ['src/components']
+      // dirs: ['src/components']
+      // 带上目录前缀
+      directoryAsNamespace: true,
+      collapseSamePrefixes: true,
+      resolvers: [ElementPlusResolver(), IconsResolver({ prefix: 'i' })]
+    }),
+    Icons({
+      /* options */
+      autoInstall: true
     })
   ],
   resolve: {

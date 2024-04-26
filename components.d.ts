@@ -15,6 +15,7 @@ declare module 'vue' {
     IMdiLockPasswordFill: typeof import('~icons/mdi/lock-password-fill')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    UserChild: typeof import('./src/components/user/Child.vue')['default']
     UserComponent: typeof import('./src/components/user/UserComponent.vue')['default']
   }
 }

@@ -5,3 +5,7 @@
 // export default {}
 </script>
 <style lang=""></style>
+<route lang="yaml">
+meta:
+  layout: home
+</route>

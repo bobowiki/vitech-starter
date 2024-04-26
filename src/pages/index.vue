@@ -1,13 +1,28 @@
-<script setup lang="ts">
+<script setup lang="tsx">
 import { RouterLink } from 'vue-router/auto'
 const msg = ref('hello world')
 const target = ref(null)
 
 const { x, y, isOutside } = useMouseInElement(target)
+// 报错一个setup 不允许有多个导出
+// export default defineComponent({
+//   name: 'HomeIndex'
+// })
+// defineOptions({
+//   name: 'HomeIndex'
+// })
+// jsx 报错需要进行处理哦，在tsconfig.node.json 中加入 jsx: "preserve"
+// defineRender(() => {
+//   return <div>hello 123</div>
+// })
+const handleClick = (num: number) => {
+  console.log(num)
+}
 </script>
 
 <template>
   <div ref="target">
+    <UserChild @click-count="handleClick"></UserChild>
     <div class="p-10">hello world</div>
     <h1 class="text-3xl font-bold underline">Hello world!</h1>
     <h1>{{ msg }}</h1>
@@ -38,3 +53,12 @@ const { x, y, isOutside } = useMouseInElement(target)
 </template>
 
 <style lang=""></style>
+<route lang="yaml">
+meta:
+  layout: default
+</route>
+<!-- <script lang="ts">
+export default defineComponent({
+  name: 'HomeIndex'
+})
+</script> -->

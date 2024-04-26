@@ -34,6 +34,7 @@
     "@unocss/preset-wind": "^0.59.4",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vue-macros/volar": "^0.18.18",
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/test-utils": "^2.4.5",
@@ -52,9 +53,11 @@
     "unplugin-auto-import": "^0.17.5",
     "unplugin-icons": "^0.18.5",
     "unplugin-vue-components": "^0.26.0",
+    "unplugin-vue-macros": "^2.9.1",
     "unplugin-vue-router": "^0.8.6",
     "vite": "^5.2.8",
     "vite-plugin-vue-devtools": "^7.0.25",
+    "vite-plugin-vue-layouts": "^0.11.0",
     "vitest": "^1.4.0",
     "vue-tsc": "^2.0.11"
   }

@@ -12,13 +12,21 @@ import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import Layouts from 'vite-plugin-vue-layouts'
+import VueMacros from 'unplugin-vue-macros/vite'
+// import Vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     VueRouter({}),
-    vue(),
-    vueJsx(),
+    VueMacros({
+      plugins: {
+        vue: vue(),
+        vueJsx: vueJsx() // 如果需要
+      }
+    }),
+
     VueDevTools(),
     UnoCSS(),
     AutoImport({
@@ -47,6 +55,9 @@ export default defineConfig({
     Icons({
       /* options */
       autoInstall: true
+    }),
+    Layouts({
+      layoutsDirs: 'src/layouts'
     })
   ],
   resolve: {

@@ -13,10 +13,11 @@
     "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "baseUrl": ".",
+    "jsx": "preserve",
     "paths": {
       "@/*": ["./src/*"]
     },
     "moduleResolution": "Bundler",
-    "types": ["unplugin-vue-router/client"]
+    "types": ["unplugin-vue-router/client", "vite-plugin-vue-layouts/client"]
   }
 }

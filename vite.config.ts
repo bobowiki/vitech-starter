@@ -15,6 +15,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Layouts from 'vite-plugin-vue-layouts'
 import VueMacros from 'unplugin-vue-macros/vite'
 import { VitePWA } from 'vite-plugin-pwa'
+import { viteMockServe } from 'vite-plugin-mock'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -26,8 +27,8 @@ export default defineConfig({
         vueJsx: vueJsx() // 如果需要
       }
     }),
-
     VueDevTools(),
+    viteMockServe({ mockPath: 'mock', enable: true }),
     UnoCSS(),
     AutoImport({
       include: [

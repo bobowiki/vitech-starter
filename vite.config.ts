@@ -13,7 +13,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Layouts from 'vite-plugin-vue-layouts'
-import VueMacros from 'unplugin-vue-macros/vite'
+// import VueMacros from 'unplugin-vue-macros/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import { viteMockServe } from 'vite-plugin-mock'
 
@@ -21,12 +21,15 @@ import { viteMockServe } from 'vite-plugin-mock'
 export default defineConfig({
   plugins: [
     VueRouter({}),
-    VueMacros({
-      plugins: {
-        vue: vue(),
-        vueJsx: vueJsx() // 如果需要
-      }
-    }),
+    vue(),
+    vueJsx(),
+    // vue3.3之后不需要了
+    // VueMacros({
+    //   plugins: {
+    //     vue: vue(),
+    //     vueJsx: vueJsx() // 如果需要
+    //   }
+    // }),
     VueDevTools(),
     viteMockServe({ mockPath: 'mock', enable: true }),
     UnoCSS(),

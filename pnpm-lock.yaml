@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@unocss/reset':
-        specifier: ^0.59.4
-        version: 0.59.4
       '@vueuse/core':
         specifier: ^10.9.0
         version: 10.9.0(vue@3.4.25(typescript@5.4.5))
@@ -49,6 +46,9 @@ importers:
         specifier: ^20.12.5
         version: 20.12.7
       '@unocss/preset-wind':
+        specifier: ^0.59.4
+        version: 0.59.4
+      '@unocss/reset':
         specifier: ^0.59.4
         version: 0.59.4
       '@vitejs/plugin-vue':

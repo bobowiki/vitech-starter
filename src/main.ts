@@ -8,8 +8,9 @@ import router from './router'
 
 import './assets/main.css'
 // import 'reset-css'
-import '@unocss/reset/normalize.css'
+// import '@unocss/reset/normalize.css'
 import 'virtual:uno.css'
+import '@unocss/reset/tailwind.css'
 
 const app = createApp(App)
 

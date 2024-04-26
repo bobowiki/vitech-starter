@@ -1,5 +1,21 @@
 <script setup lang="tsx">
 import { RouterLink } from 'vue-router/auto'
+import { registerSW } from 'virtual:pwa-register'
+
+onMounted(() => {
+  registerSW({
+    immediate: true,
+    // onNeedRefresh() {
+    //   console.log('need fresh')
+    // },
+    onRegisteredSW(url, registration) {
+      setInterval(() => {
+        registration && registration.update()
+      })
+      console.log(url, registration)
+    }
+  })
+})
 const msg = ref('hello world')
 const target = ref(null)
 
@@ -46,9 +62,13 @@ const handleClick = (num: number) => {
     <!-- Sun in light mode, Moon in dark mode, from Carbon -->
     <button class="i-carbon-sun dark:i-carbon-moon" />
     <!-- Twemoji of laugh, turns to tear on hovering -->
-    <div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy" />
+    <div
+      class="i-twem oji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy"
+    />
     <div class="i-solar:4k-bold"></div>
     <div class="i-solar:airbuds-case-bold-duotone" style="color: orange"></div>
+    <ReloadPropmt />
+    hello world yikai hhhhh
   </div>
 </template>
 

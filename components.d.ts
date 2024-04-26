@@ -12,7 +12,7 @@ declare module 'vue' {
     IFaSolidDiceFive: typeof import('~icons/fa-solid/dice-five')['default']
     IMdiAccount: typeof import('~icons/mdi/account')['default']
     IMdiDramaMasks: typeof import('~icons/mdi/drama-masks')['default']
-    IMdiLockPasswordFill: typeof import('~icons/mdi/lock-password-fill')['default']
+    ReloadPropmt: typeof import('./src/components/ReloadPropmt.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     UserChild: typeof import('./src/components/user/Child.vue')['default']
